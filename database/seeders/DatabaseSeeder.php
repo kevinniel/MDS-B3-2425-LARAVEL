@@ -18,6 +18,10 @@ class DatabaseSeeder extends Seeder
             'name' => 'toto',
             'email' => 'toto@toto.fr',
         ]);
+        User::factory()->create([
+            'name' => 'toto2',
+            'email' => 'toto2@toto.fr',
+        ]);
 
         Blog::factory(10)->create();
     }

@@ -60,13 +60,19 @@ Vous allez réaliser une application de gestion de locations de box de stockage 
 # Support de cours
 Présentation de Laravel et bases
 
+## Debug bar
+
+Si vous voulez vous simplifier la vie : 
+
+`composer require barryvdh/laravel-debugbar --dev`
+
 ## Artisan
 Artisan est une interface utilisable en ligne de commande (CLI - Command Line Interface).
 
 ### Utilisation de base
 Artisan est basé sur PHP, et nécessite donc l'utilisation de la commande "PHP" pour s'en servir.
-Toute commande artisan débute donc par "php artisan".
-La commande "php artisan" seule, affichera l'ensemble des commandes disponibles proposées par Artisan.
+Toute commande artisan débute donc par `php artisan`.
+La commande `php artisan` seule, affichera l'ensemble des commandes disponibles proposées par Artisan.
 
 ### Commandes usuelles
 - **Création de fichiers** : Artisan nous permet de générer des fichiers a l'aide de la commande `php artisan make:...`. On doit ensuite interposer le symbole ":", puis spécifier le type de fichier que l'on veut créer.
@@ -146,17 +152,10 @@ La commande "php artisan" seule, affichera l'ensemble des commandes disponibles 
 1. Ajouter une foreign key dans votre base de données pour lier une table "A" à une table "B". Ajouter donc un champs "b_id" dans la table "A". Ensuite, déclarer votre foreign dans la migration grâce à : 
 
     ```
-    # b_id est le nom de la colonne créée dans la table représentant le lien vers l'autre table
-    # unsigned() permet d'éviter de nombreuses erreurs laravel
-    # nullable() vous permet de ne pas rendre obligatoire le remplissage de ce champs.
-    $table->bigInteger('b_id')->unsigned()->nullable();
-
-    # le foreign('b_id') indique que c'est le champs 'b_id', créé juste au dessus, qui servira
-    # de lien avec l'autre table.
-    # references('id)->on('b') signifie que le champs 'b_id' va avoir comme référence (le champs qui va le lié à l'autre table) la colonne 'id', de la table 'b'
-    $table->foreign('b_id') 
-        ->references('id')
-        ->on('b');
+    # foreignId est le type de chamlps qu'il nous faut
+    # user_id est le nom du champs que l'on crée
+    # constrained('users') est le lien vers la table souhaitée
+    $table->foreignId('user_id')->constrained('users')->onDelete('set null');
     ```
 
 2. Déclarer cette relation dans vos models.
@@ -167,7 +166,7 @@ La commande "php artisan" seule, affichera l'ensemble des commandes disponibles 
         public function b()
         {
             # BelongsTo doit prendre en premier paramètre le nom du model A, puis en second paramètre, le nom du champs dans le modèle courant lié avec le model A grâce à sa foreign key
-            return $this->belongsTo(B::class, "b_id");
+            return $this->belongsTo(B::class);
         }
     ```
     - Vous pouvez déclarer la fonction inverse dans l'autre model pour pouvoir accéder au "with" depuis l'autre model : 

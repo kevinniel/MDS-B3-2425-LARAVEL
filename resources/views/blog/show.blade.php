@@ -12,6 +12,8 @@
         <li>{{ $blog->id }}</li>
         <li>{{ $blog->name }}</li>
         <li>{{ $blog->content }}</li>
+        <li>user_id : {{ $blog->user_id }}</li>
+        <li>auteur : {{ $blog->user->name }}</li>
     </ul>
 </body>
 </html>

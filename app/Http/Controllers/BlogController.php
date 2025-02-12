@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 
@@ -10,14 +11,14 @@ class BlogController extends Controller
     public function index()
     {
         return view('blog.index', [
-            "blogs" => Blog::all()
+            "blogs" => Blog::where("user_id", Auth::user()->id)->get()
         ]);
     }
 
     public function show($id)
     {
         return view('blog.show', [
-            "blog" => Blog::findOrFail($id)
+            "blog" => Blog::with('user')->find($id)
         ]);
     }
 
@@ -31,6 +32,7 @@ class BlogController extends Controller
         $blog = new Blog();
         $blog->name = $request->get('name');
         $blog->content = $request->get('content');
+        $blog->user_id = Auth::user()->id;
         $blog->save();
 
         return redirect()->route('blog.index');

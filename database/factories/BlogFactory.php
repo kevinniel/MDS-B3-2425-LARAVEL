@@ -19,6 +19,7 @@ class BlogFactory extends Factory
         return [
             'name' => fake()->name(),
             'content' => fake()->paragraph(),
+            'user_id' => random_int(1, 2)
         ];
     }
 }
