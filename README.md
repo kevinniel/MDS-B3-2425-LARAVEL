@@ -50,9 +50,7 @@ Vous allez réaliser une application de gestion de locations de box de stockage 
 
 1. Initialisation de Laravel
 2. Mise en place de l'authentification (cf breeze : https://laravel.com/docs/11.x/starter-kits#laravel-breeze)
-3. Gestion des boxs
-    - CRUD -> cf blog réalisé ensemble
-
+3. Gestion des boxs (CRUD : https://github.com/kevinniel/MDS-B3-2425-LARAVEL?tab=readme-ov-file#etapes-dun-crud)
 
 -----------------
 -----------------
