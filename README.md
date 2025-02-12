@@ -41,6 +41,12 @@ Vous allez réaliser une application de gestion de locations de box de stockage 
 - URL d'accès à votre projet
 - Readme - qui inclura des logs de connexion par défaut pour tester l'application !
 
+-----------------
+
+# Etapes de réalisation
+
+-----------------
+
 # Support de cours
 Présentation de Laravel et bases
 
