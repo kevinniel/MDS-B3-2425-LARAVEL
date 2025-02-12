@@ -48,6 +48,9 @@ Vous allez réaliser une application de gestion de locations de box de stockage 
 
 # Etapes de réalisation
 
+1. Initialisation de Laravel
+2. Mise en place de l'authentification (cf breeze : https://laravel.com/docs/11.x/starter-kits#laravel-breeze)
+
 -----------------
 -----------------
 -----------------
