@@ -50,6 +50,9 @@ Vous allez réaliser une application de gestion de locations de box de stockage 
 
 1. Initialisation de Laravel
 2. Mise en place de l'authentification (cf breeze : https://laravel.com/docs/11.x/starter-kits#laravel-breeze)
+3. Gestion des boxs
+    - CRUD -> cf blog réalisé ensemble
+
 
 -----------------
 -----------------
@@ -125,6 +128,14 @@ La commande "php artisan" seule, affichera l'ensemble des commandes disponibles 
     - Mise en place de l'exécution du factory dans le fichier `DatabaseSeeder` en spécifiant le nombre de création que vous souhaitez : `Blog::factory([NOMBRE_SOUHAITE])->create();`
 4. Création d'une ou plusieurs route(s)
     - Ajout de la / des route(s) dans le fichier `/routes/web.php`. Renseignement de l'URL attendue, du contrôleur ainsi que de sa méthode qui doit être appelée au matching de l'URL, puis définition d'un nom sur la route pour facilité son utilisation a posteriori.
+    - Rappel des différentes routes d'un CRUD dans laravel : 
+        - `GET` - `/blogs` - affiche tous les blogs
+        - `GET` - `/blogs/{id}` - affiche le détail d'un blog
+        - `GET` - `/blogs/{id}/create` - affiche le formulaire d'ajout d'un blog
+        - `POST` - `/blogs` - Traite le formulaire d'ajout d'un blog (= save en BDD)
+        - `GET` - `/blogs/{id}/edit` - affiche le formulaire de modification d'un blog
+        - `PUT` - `/blogs/{id}/update` - Traite le formulaire de modification d'un blog (= save en BDD)
+        - `DELETE` - `/blogs` - Supprime un blog en BDD (l'id du blog à supprimer est passé dans un formulaire et non dans l'URL)
 5. Création du contrôleur
     - Création du fichier avec la commande `php artisan make:controller [NOM_DU_CONTROLLER]`
     - Définition de la / des méthode(s) en lien avec les routes précédemment créées
