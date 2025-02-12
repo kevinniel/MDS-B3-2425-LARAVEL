@@ -42,9 +42,15 @@ Vous allez réaliser une application de gestion de locations de box de stockage 
 - Readme - qui inclura des logs de connexion par défaut pour tester l'application !
 
 -----------------
+-----------------
+-----------------
+-----------------
 
 # Etapes de réalisation
 
+-----------------
+-----------------
+-----------------
 -----------------
 
 # Support de cours
