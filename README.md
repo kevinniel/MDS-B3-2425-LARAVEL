@@ -261,6 +261,11 @@ server {
 Plusieurs étapes à suivre : 
 
 1. créer un fichier `.github/workflows/ci.yml` à la racine de votre projet
+2. y coller le contenu de base fourni ci-dessous (ci.yml)
+3. Aller paramétrer les variables d'environnement dans github
+    - aller dans "settings", "Secret & Variables", "Actions"
+    - dans l'onglet "Secrets", aller à "New repository secret"
+    - Créer les 4 variables nécessaires
 
 
 ### Contenu de base du ci.yml
