@@ -204,3 +204,41 @@ Sur le VPS :
 - restart le service nginx : `sudo service nginx restart`
 - se positionner dans le bon dossier `cd /var/www/html`
 - cloner le repo dans le dossier `sudo git clone [URL] .`
+- installer les dépendances de laravel avec composer : `composer install`
+- vérifier l'installation de php-fpm (`sudo apt install php8.2-fpm -y`)
+- Configurer le `.env` (`sudo cp .env.example .env`)
+- regénérer la clé dans le .env (`php artisan key:generate`)
+- Modifiez le fichier de conf default de nginx (`/etc/nginx/sites-available/default`) -> cf gros bout de code ci-dessous
+- vérifier les droits sur les fichiers : 
+```
+sudo chown -R www-data:www-data /var/www/html
+sudo chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+```
+
+## Default Nginx conf file
+
+```
+server {
+    listen 80;
+    server_name _; # Change avec ton domaine si nécessaire
+    root /var/www/html/public;
+    index index.php index.html index.htm;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    # Configuration pour PHP-FPM
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php8.2-fpm.sock;  # Vérifie la version de PHP installée
+        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+
+    # Interdire l'accès aux fichiers cachés (ex: .env)
+    location ~ /\. {
+        deny all;
+    }
+}
+```
