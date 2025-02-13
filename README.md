@@ -202,3 +202,5 @@ Sur le VPS :
 - `sudo apt install -y nginx php-cli php-fpm php-sqlite3 php-xml php-mbstring php-curl php-zip unzip git composer sqlite3` installation des paquets pour le déploiement de laravel
 - modification du fichier `/etc/nginx/sites-enabled/default` : ajout de `index.php` sur la ligne des index
 - restart le service nginx : `sudo service nginx restart`
+- se positionner dans le bon dossier `cd /var/www/html`
+- cloner le repo dans le dossier `sudo git clone [URL] .`
