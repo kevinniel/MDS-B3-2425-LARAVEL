@@ -200,3 +200,5 @@ Sur le VPS :
 
 - `sudo apt update && sudo apt upgrade -y` mettre à jour les paquets
 - `sudo apt install -y nginx php-cli php-fpm php-sqlite3 php-xml php-mbstring php-curl php-zip unzip git composer sqlite3` installation des paquets pour le déploiement de laravel
+- modification du fichier `/etc/nginx/sites-enabled/default` : ajout de `index.php` sur la ligne des index
+- restart le service nginx : `sudo service nginx restart`
