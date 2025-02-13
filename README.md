@@ -224,7 +224,8 @@ sudo chmod 664 /var/www/html/database/database.sqlite
 - il reste à build les dépendances Front via NPM. Installer NPM
 ```
 sudo apt install nodejs npm -y
-
+npm install
+npm run build
 ```
 
 ## Default Nginx conf file
