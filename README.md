@@ -191,3 +191,12 @@ Pour cela, vous pouvez par exemple faire l'une des requêtes suivantes :
     # Renverra a la fois le model B, en y incluant dans les relations, le ou les objets "A" correspondant(s) en base de données
     $obj = B::where('id', $id)->with('as')->first();
 ```
+
+# Déploiement & CI/CD
+
+## Déploiement
+
+Sur le VPS : 
+
+- `sudo apt update && sudo apt upgrade -y` mettre à jour les paquets
+- `sudo apt install -y nginx php-cli php-fpm php-sqlite3 php-xml php-mbstring php-curl php-zip unzip git composer sqlite3` installation des paquets pour le déploiement de laravel
