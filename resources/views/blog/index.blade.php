@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    Articles
+    <h1>Articles</h1>
     <a href="{{ route('blog.create') }}">Ajout un article</a>
     <table border="1">
         <thead>
