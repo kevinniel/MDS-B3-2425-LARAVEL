@@ -34,6 +34,12 @@ Vous allez réaliser une application de gestion de locations de box de stockage 
 - Milestones
 - Branches à gogo 🌴
 
+## !!!!! Nouveauté - à faire avant VENDREDI SOIR !!!!!
+
+A partir du moment où vous aurez mis en place le CI/CD, vous NE DEVREZ PLUS DÉVELOPPER SUR LA BRANCHE MAIN/MASTER.
+Vous devrez mettre en place une branche nommée `dev`. Chaque merge sur la branche master/main devra automatiquement déclencher le CI/CD et le déploiement.
+Pour intégrer vos features en prod, vous devrez obligatoirement passer par la branche `dev`.
+
 ## Les livrables finaux
 
 - Code source
