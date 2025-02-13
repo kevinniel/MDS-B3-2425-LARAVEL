@@ -214,6 +214,18 @@ Sur le VPS :
 sudo chown -R www-data:www-data /var/www/html
 sudo chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 ```
+- Créer le fichier SQLite, et donner les droits adéquats dessus :
+```
+touch /var/www/html/database/database.sqlite
+sudo chown www-data:www-data /var/www/html/database/database.sqlite
+sudo chmod 664 /var/www/html/database/database.sqlite
+```
+- Déclencher la migration (`php artisan migrate`)
+- il reste à build les dépendances Front via NPM. Installer NPM
+```
+sudo apt install nodejs npm -y
+
+```
 
 ## Default Nginx conf file
 
