@@ -296,3 +296,8 @@ jobs:
             script: |
                 cd ${{ secrets.PROJECT_PATH }}
 ```
+
+## BDD
+
+![image](bdd.png)
+
