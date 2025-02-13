@@ -261,3 +261,27 @@ server {
 Plusieurs étapes à suivre : 
 
 1. créer un fichier `.github/workflows/ci.yml` à la racine de votre projet
+
+
+### Contenu de base du ci.yml
+
+```
+name: CI
+
+on: [push]
+
+jobs:
+    deploy:
+        if: github.ref == 'refs/heads/master'
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v2
+        - name: Push to server
+            uses: appleboy/ssh-action@master
+            with:
+            host: ${{ secrets.SERVER_IP }}
+            username: ${{ secrets.SERVER_USERNAME }}
+            password: ${{ secrets.SERVER_PASSWORD }}
+            script: |
+                cd ${{ secrets.PROJECT_PATH }}
+```
