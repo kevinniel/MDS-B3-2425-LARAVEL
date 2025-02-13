@@ -255,3 +255,9 @@ server {
     }
 }
 ```
+
+## Mise en place du CI/CD
+
+Plusieurs étapes à suivre : 
+
+1. créer un fichier `.github/workflows/ci.yml` à la racine de votre projet
