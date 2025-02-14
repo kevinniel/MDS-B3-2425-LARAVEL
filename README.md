@@ -47,6 +47,10 @@ Pour intégrer vos features en prod, vous devrez obligatoirement passer par la b
 - URL d'accès à votre projet
 - Readme - qui inclura des logs de connexion par défaut pour tester l'application !
 
+## 😇 Aide
+
+Editeur JS pour gérer l'écriture des modèles de contrat : https://editorjs.io/
+
 -----------------
 -----------------
 -----------------
