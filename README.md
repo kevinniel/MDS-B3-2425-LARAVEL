@@ -59,7 +59,22 @@ Pour intégrer vos features en prod, vous devrez obligatoirement passer par la b
 
 ## 😇 Aide
 
-Editeur JS pour gérer l'écriture des modèles de contrat : https://editorjs.io/
+Editeur JS pour gérer l'écriture des modèles de contrat : https://editorjs.io/. voici la liste des imports en cas de besoin : 
+
+```
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/simple-image@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/code@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/embed@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/table@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/link@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/marker@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/inline-code@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/editorjs-button@latest"></script>
+```
 
 -----------------
 -----------------
