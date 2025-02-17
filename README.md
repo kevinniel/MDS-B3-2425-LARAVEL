@@ -102,8 +102,13 @@ onChange: function () {
 1. ✅ Initialisation de Laravel
 2. ✅ Mise en place de l'authentification (cf breeze : https://laravel.com/docs/11.x/starter-kits#laravel-breeze)
 3. ✅ Gestion des boxs (CRUD : https://github.com/kevinniel/MDS-B3-2425-LARAVEL?tab=readme-ov-file#etapes-dun-crud)
-4. Gestion des locataires (= boxs !)
-5. Gestion des modèles de contrats (= CRUD !)
+4. ✅ Gestion des locataires (= boxs !)
+5. Gestion des modèles de contrats (= CRUD !) (6)
+6. Gestion des contrats (3)
+7. Gestion des factures (5) ==> creation uniquement...
+8. Gestion des paiements (1)
+9. Gestion des impots (2)
+10. Bonus (1)
 
 -----------------
 -----------------
@@ -346,3 +351,8 @@ jobs:
 
 ![image](bdd.png)
 
+## Tests & coverage
+
+```
+vendor/bin/pest --coverage-html=build/coverage
+```
