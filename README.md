@@ -76,6 +76,22 @@ Editeur JS pour gérer l'écriture des modèles de contrat : https://editorjs.io
 <script src="https://cdn.jsdelivr.net/npm/editorjs-button@latest"></script>
 ```
 
+Et le petit bout de paramétrage de editorJS : 
+
+```
+data: {
+    blocks: JSON.parse(@json($landing->content ?? [])),
+},
+onChange: function () {
+    console.log('something changed');
+    editor.save().then((outputData) => {
+        document.querySelector('input[name=content]').value = JSON.stringify(outputData['blocks'])
+    }).catch((error) => {
+        console.log('Saving failed: ', error)
+    });
+}
+```
+
 -----------------
 -----------------
 -----------------
