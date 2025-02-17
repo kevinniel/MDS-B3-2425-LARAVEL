@@ -50,7 +50,7 @@ Améliorer (entre autre) la génération des factures :
 - Issues pour chaque chose réalisée
 - Milestones
 - Branches à gogo 🌴
-- **VOTRE README DOIT CONTENIR L'URL DE PROD & DES OGINS FONCTIONNELS POUR TOUT TESTER (2 COMPTES MINIMUM)**
+- **VOTRE README DOIT CONTENIR L'URL DE PROD & DES LOGINS FONCTIONNELS POUR TOUT TESTER (2 COMPTES MINIMUM)**
 
 ## !!!!! Nouveauté - à faire avant VENDREDI SOIR !!!!!
 
